@@ -1,0 +1,14 @@
+修復在大後期AI知道自己要輸了時，自殺的情況
+evaluate加入了depth引數，使晚死更優
+evaluate 射線掃描更新
+evaluate 制空權bonus 更新 還在想多少合適
+getMove中加入物理防呆，S中限制不能疊自己高塔
+
+
+將bot6的evaluate重新加回(設限掃描)(有時間戳不怕超時)
+
+輕量版保留在lightEvaluate
+
+
+
+目前交上去的v18是ni版本(新的射線掃描)(新的制空權)
