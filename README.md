@@ -3,7 +3,7 @@
 這是一個針對 [TZAAR 棋盤遊戲](https://en.wikipedia.org/wiki/Tzaar) 開發的 AI 機器人專案。
 
 ## 專案簡介
-本專案為 [114 程式設計課程] 的期末專案，目標是實作一個能夠進行合法移動並具備基本策略的 TZAAR 遊戲引擎。
+本專案為 [114 程式設計課程] 的期中專案，目標是實作一個能夠進行合法移動並具備基本策略的 TZAAR 遊戲引擎。
 
 ## 課程規範 (Project Specification)
 本專案根據 [2026PD 課程規範](https://hackmd.io/@2026PD/ryXceLwdWx) 進行開發。
