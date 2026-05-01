@@ -1,0 +1,48 @@
+與E14124153對戰時在第52步因為無法吃子而輸
+
+原evaluate已經在射線掃描中，有隱含的計算了"移動力了(攻擊度)"
+但我的致命條件中並無考慮到因為無法移動而死，才導致minimax沒有預知這種死亡
+
+解決:
+發現自己的minimax原本就有了:
+if (moves.empty()) {
+        return isMaximizing ? -999999 : 999999; 
+    }
+
+
+只需要再加上depth 使他知道"好死不如賴活著" 應該就能修復
+return isMaximizing ? (-1000000 - depth) : (1000000 + depth); 
+
+        note: 
+        還是一樣輸，我擺爛了，應該是evaluate輸人家，evaluate可不好改。
+
+        未來展望:
+        直接把evaluate換成由deeplearning訓練出來的"最佳evaluate矩陣"，或許可以打破困境。
+        但是工程量巨大還需要好以點的GPU去跑訓練，所以我就沒進一步優化了。
+
+
+
+突然想到可以在這裡與ordrMove加個優化
+想到以前因為在前期pass導致自己tzaar被滅族，有加pass物理鎖。
+我可以去把它解除。
+1. orderMove改了pass從-1000 改成 0
+
+
+2. int evaluate(int b[9][9], int l[9][9], string myColor, int depth) {
+    // ... (前面原本的變數宣告都不動)
+
+    // 1. 【新增這兩個變數】用來計算雙方有幾顆棋子「具備吃子的能力」
+    int whiteAttackCount = 0;
+    int blackAttackCount = 0;
+}
+
+結果: 勝率提高，但普遍下到大後期。推測是因為pass的加入使AI在中期會比較保守。
+
+
+
+開發時間:
+3/20 ~ 4/11
+我要宣布結案了，來複習與寫結報吧。
+
+
+
