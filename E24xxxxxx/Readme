@@ -1,0 +1,36 @@
+學號 (Student ID(s)) : E24146644
+
+姓名 (Name(s)) : 何家睿
+
+完成/最後更新時間 (Date/Time) : 2026/4/11 14:00 
+
+開發與執行環境 (Environment) : 
+    - OS: Windows 11 (64-bit)
+    - Editor: Visual Studio Code (1.115)
+    - Terminal: Cygwin
+    - Compiler: g++ (GCC) 13.4.0
+    - 語言版本: Compiler Default
+
+
+執行方式 (How to Run) :
+
+    - Cygwin切換到專案資料夾
+    - 輸入 g++ -o E24146644 E24146644.cpp
+    - 輸入(平台呼叫方式)  ./E24146644 [Color] [Round] [board] [chessLayer] [stepHistory]
+
+
+依賴或注意事項 (Notes/Dependencies) : 
+
+    頭文件引入<bits/stdc++.h> 用到其中:
+        <iostream>
+        <fstream>    
+        <string>     
+        <vector>  
+        <ctime>     用於時間戳記
+        <sstream>   字串串流切割  
+        <algorithm> max, min, sort, swap 用於orderMove()
+        <stdexcept> 用於拋出超時例外
+
+
+    有利用到stoi() (string to integer) 這個函數，C++11 版本才有辦法使用。
+
