@@ -1,0 +1,3 @@
+新增findbestMove
+修改applyMove() 變成 applyundoMove()
+新增undo()
